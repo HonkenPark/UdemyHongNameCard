@@ -5,6 +5,14 @@ class SplashScreen extends StatelessWidjet {
 
 	@override
 	Widget build(BuildContext context) {
-		return const Scaffold(body: Center(child: ,),);
+		return const Scaffold(
+			body: Center(
+				child: Image.asset(
+					'assets/business_card.png',
+					width: 180,
+					height: 180,
+				),
+			),
+		);
 	}
 }
