@@ -5,12 +5,34 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(
+      const Duration(seconds: 2),
+      () {
+        Navigator.pushReplacementNamed(context, '/main');
+      },
+    );
+
     return Scaffold(
       body: Center(
-        child: Image.asset(
-          '/assets/business_card.png',
-          width: 180,
-          height: 180,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/id.png',
+              width: 180,
+              height: 180,
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 32),
+              child: const Text(
+                'Name Card',
+                style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+            ),
+          ],
         ),
       ),
     );
